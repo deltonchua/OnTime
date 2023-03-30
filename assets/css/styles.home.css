@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #212529;
+}
+
+a:focus {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 85vw;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.header-content {
+  display: flex;
+  width: 85vw;
+  max-width: 1440px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.header-right i {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+}
+
+/* MENU OVERLAY */
+.overlay {
+  height: 0;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #111;
+  opacity: 0.95;
+  overflow-x: hidden;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.overlay a {
+  margin: 0.7rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  /* transition: 0.3s; */
+}
+
+.overlay a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.overlay-dropdown {
+  display: none;
+}
+
+.overlay-dropdown-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-dropdown a {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  line-height: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.overlay .social {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-bottom: -0.3rem;
+}
+
+.overlay .social a {
+  font-size: 1.6rem;
+  margin: 0 0.7rem;
+}
+
+.overlay .close-btn {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+/* CONTENT */
+.content {
+  min-height: 40rem;
+  width: 100%;
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#particles-js {
+  position: absolute;
+  z-index: -1;
+  top: 4rem;
+  height: 36rem;
+  width: 90vw;
+  max-width: 1440px;
+}
+
+.content-body {
+  width: 60%;
+  margin: 2rem 0;
+}
+
+.content-body h1 {
+  line-height: 1.3;
+}
+
+.content-body h2 {
+  margin: 1.5rem 0 2rem;
+}
+
+.cta-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.cta-container a {
+  width: 50%;
+  padding: 0.8rem 0;
+  margin-right: 1.5rem;
+  border: 0.3rem solid #4169e1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cta-container a:hover {
+  background-color: #4169e1;
+  color: #f2f2f2;
+}
+
+/* FOOTER */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+footer a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.footer-block ul li {
+  margin-top: 0.7rem;
+}
+
+.footer-block .market img {
+  margin-top: 1rem;
+  height: 22px;
+}
+
+.footer-block .cmc-logo-white {
+  display: none;
+}
+
+/* QR OVERLAY */
+.qr-overlay {
+  height: 0;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  opacity: 0.95;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.donate-qr {
+  width: 85%;
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate-qr .donate-qr-image {
+  width: 100%;
+  margin: 0.6rem 0;
+  /* height: 25rem; */
+}
+
+.donate-qr .donate-qr-address {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.donate-qr .ens-address {
+  margin-top: 0.4rem;
+}
+
+.donate-qr .close-qr {
+  font-size: 3rem;
+}
+
+.footer-block .social {
+  display: flex;
+  align-items: center;
+  margin-top: -0.4rem;
+}
+
+.footer-block .social li {
+  margin-right: 0.8rem;
+  font-size: 1.125rem;
+}
+
+.darkmode .cmc-logo {
+  display: none;
+}
+
+.darkmode .cmc-logo-white {
+  display: block;
+}
+
+/* DARKMODE */
+.darkmode {
+  background-color: #212529;
+  color: #f2f2f2;
+}
+
+.darkmode a {
+  color: #f2f2f2;
+}
+
+.darkmode header {
+  background-color: #212529;
+}
+
+.darkmode .qr-overlay {
+  background-color: #212529;
+}
+
+.darkmode .donate-qr-image {
+  margin: 1rem 0;
+}
+
+@media (max-width: 1280px) {
+  .content-body {
+    width: 80%;
+  }
+}
+
+@media (max-width: 854px) {
+  .content-body {
+    width: 90%;
+  }
+
+  .cta-container {
+    width: 70%;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 490px) {
+  .content-body {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .cta-container {
+    width: 80%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cta-container a {
+  min-width: 9rem;
+}
